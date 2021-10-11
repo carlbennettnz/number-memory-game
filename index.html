@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Number Memory Game</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body data-sigh=true>
+	<main>
+		<section id="step-1">
+			<form>
+				<button id="say" disabled="disabled">Say number</button>
+				<div class="settings">
+					<input type="number" id="digits" autocomplete="off" max="99">
+					<label for="digits">digits in</label>
+					<input type="number" id="seconds" autocomplete="off" max="99" value=1>
+					<label for="seconds">seconds please</label>
+				</div>
+				<div>
+				</div>
+			</form>
+		</section>
+		<section id="step-2">
+			<div id="timer">0:30</div>
+		</section>
+		<section id="step-3">
+			<form name="world">
+				<label for="number">Do you remember the number?</label>
+				<input type="number" id="number" autocomplete="off">
+				<button>Check</button>
+			</form>
+		</section>
+		<section id="step-4">
+			<div class="yep">
+				<h1>Correct!</h1>
+				<p>Now please enjoy this cat picture.</p>
+				<img id="reward" src="http://thecatapi.com/api/images/get?format=src&amp;size=small&amp;type=gif">
+			</div>
+			<div class="nope">
+				<h1>Nope!</h1>
+				<dl>
+					<dt>Your answer</dt>
+					<dd id="your-answer"></dd>
+					<dt>Correct answer</dt>
+					<dd id="correct-answer"></dd>
+				</dl>
+			</div>
+		</section>
+	</main>
+	<button id="retry">Try again?</button>
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
